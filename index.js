@@ -38,7 +38,9 @@ async function main () {
       yamux()
     ],
     services: {
-      identify: identify(),
+      identify: identify({
+        protocolPrefix: "fusion"
+      }),
       relay: circuitRelayServer()
     }
   })
