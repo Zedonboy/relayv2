@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 
-import { noise } from '@chainsafe/libp2p-noise'
-import { yamux } from '@chainsafe/libp2p-yamux'
-import { circuitRelayServer } from '@libp2p/circuit-relay-v2'
-import { identify } from '@libp2p/identify'
-import { webSockets } from '@libp2p/websockets'
-import { createLibp2p } from 'libp2p'
+const { noise } = require('@chainsafe/libp2p-noise')
+const { yamux } = require('@chainsafe/libp2p-yamux')
+const { circuitRelayServer } = require('@libp2p/circuit-relay-v2')
+const { identify } = require('@libp2p/identify')
+const { webSockets } = require('@libp2p/websockets')
+const { createLibp2p } = require('libp2p')
 
 async function main () {
   const node = await createLibp2p({
